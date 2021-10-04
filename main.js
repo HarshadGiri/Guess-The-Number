@@ -32,15 +32,11 @@ check.addEventListener('click', function () {
        
         
     }
-   else if (userInput > computer || cs>0) {
+    if (userInput > computer || ) {
         guessN.innerHTML = "You Guess Too Higher!"   
 
  
-    } if(cs == 0){
-        guessN.innerHTML =  "Oop!! You lose the game, Reset to try again."
-        cs=cs;
-        currsc.innerHTML =`Current Score: ${cs}`
-    }
+    } 
 
 
     
