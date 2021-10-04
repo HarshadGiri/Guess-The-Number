@@ -16,29 +16,26 @@ reset.addEventListener('click', function(){
     location.reload();
 });
 
+
 check.addEventListener('click', function () {
     
     const userInput = document.querySelector('#one').value;
     
     if (userInput == computer){
         guessN.innerHTML= `You Guessed Correct,Your number is ${computer}`;
-      
-        
+         
+        Hisc.innerHTML = `High Score : ${cs}`
     
     }else if(userInput < computer) {
         guessN.innerHTML = "You Guess Too Lower!"
-        
-            
-          
-        
-       
-
     
-    }
-    if (userInput > computer) {
-        guessN.innerHTML = "You Guess Too Higher!"   
+       
         
-      
+    }
+   else if (userInput > computer) {
+        guessN.innerHTML = "You Guess Too Higher!"   
+
+ 
     }
  
    
@@ -50,10 +47,17 @@ reset.addEventListener('click' , function(userInput){
 userInput.preventDefault();
 })
 
-
-const cs= 50;
+let cs= 50;
 currsc.innerHTML =`Current Score: ${cs}`
 
 
+    check.addEventListener('click', function(){
+       
+        const userInput = document.querySelector('#one').value;
+        if(userInput>computer || userInput<computer){
+            cs=cs-5;
+            currsc.innerHTML =`Current Score: ${cs}`
+            
 
-  
+        }
+    })
