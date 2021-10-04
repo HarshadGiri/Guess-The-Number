@@ -12,22 +12,38 @@ const reset = document.querySelector('#re');
 const currsc = document.querySelector('#CR');
 const Hisc = document.querySelector('#HI')
 
+reset.addEventListener('click', function(){
+    location.reload();
+});
+
 check.addEventListener('click', function () {
+    
     const userInput = document.querySelector('#one').value;
+    
     if (userInput == computer){
         guessN.innerHTML= `You Guessed Correct,Your number is ${computer}`;
+      
         
     
-    }else if (userInput < computer) {
+    }else if(userInput < computer) {
         guessN.innerHTML = "You Guess Too Lower!"
+        
+            
+          
+        
+       
 
+    
     }
-       if (userInput > computer) {
-        guessN.innerHTML = "You Guess Too Higher!"
-
+    if (userInput > computer) {
+        guessN.innerHTML = "You Guess Too Higher!"   
+        
+      
     }
+ 
    
 });
+
 
 
 reset.addEventListener('click' , function(userInput){
@@ -40,4 +56,4 @@ currsc.innerHTML =`Current Score: ${cs}`
 
 
 
-
+  
