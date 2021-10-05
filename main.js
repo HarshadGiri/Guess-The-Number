@@ -26,17 +26,20 @@ check.addEventListener('click', function () {
          
         Hisc.innerHTML = `High Score : ${cs}`
     
-    }else if(userInput < computer ) {
+    }else if(userInput < computer || cs>0) {
         guessN.innerHTML = "You Guess Too Lower!"
     
        
         
     }
-    if (userInput > computer  ) {
+   else if (userInput > computer || cs>0) {
         guessN.innerHTML = "You Guess Too Higher!"   
 
  
-    } 
+    } if(cs == 0){
+
+        guessN.innerHTML = "Oop!! You lose the game, Reset to try again."
+    }
 
 
     
