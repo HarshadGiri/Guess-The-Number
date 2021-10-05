@@ -26,23 +26,17 @@ check.addEventListener('click', function () {
          
         Hisc.innerHTML = `High Score : ${cs}`
     
-    }else if(userInput < computer || cs>0) {
+    }else if(userInput < computer ) {
         guessN.innerHTML = "You Guess Too Lower!"
     
        
         
     }
-   else if (userInput > computer || cs>0) {
+    if (userInput > computer ) {
         guessN.innerHTML = "You Guess Too Higher!"   
 
  
-    } if(cs == 0){
-
-        guessN.innerHTML = "Oop!! You lose the game, Reset to try again."
-    }
-
-
-    
+    }   
  
    
 });
@@ -64,6 +58,11 @@ currsc.innerHTML =`Current Score: ${cs}`
             cs=cs-5;
             currsc.innerHTML =`Current Score: ${cs}`
             
+            
 
+        }
+       else if(cs == 0){
+
+            guessN.innerHTML = "Oop!! You lose the game, Reset to try again."
         }
     })
